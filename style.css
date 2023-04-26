@@ -1,0 +1,211 @@
+/*-------------------BASES-----------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+:root{
+    --SoftBlue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --VeryDarkBlueMain: hsl(217, 54%, 11%);
+    --VeryDarkBlueCard: hsl(216, 50%, 16%);
+    --VeryDarkBlueLine: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--VeryDarkBlueMain);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    color: var(--SoftBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-------------------MAIN-CONTAINER-----------------------------*/
+
+.main-container{
+    margin: 6rem 2.5rem 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VeryDarkBlueCard);
+    height: 54.5rem;
+    width: 32.5rem;
+    border-radius: 1.5rem;
+    box-shadow: .3em 0.3em 1em rgba(0,0,0,0.7);
+}
+
+/*-------------------IMAGE-CONTAINER-----------------------------*/
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 32.5rem;
+}
+
+.NFT-image{
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28rem;
+    height: 28rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+
+.NFT-image:hover{
+    background-image: url(./images/icon-view.svg), url(./images/image-equilibrium.jpg);
+    background-size: 15%, contain;
+    background-position: center center;
+    background-color: hsla(178, 100%, 50%, 0.527);
+    background-blend-mode: screen;
+    cursor: pointer;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+}
+
+/*-------------------PRODUCT-INFORMATION-----------------------------*/
+
+.product-information{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 2.5rem;
+    border-bottom: 0.2rem solid var(--VeryDarkBlueLine);
+}
+
+.product-information h1{
+    color: var(--White);
+    grid-column: 1 / 3;
+    grid-row:  1 / 2;
+    font-weight: 600;
+}
+
+.product-information h1:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+.product-information p{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    line-height: 2.5rem;
+    font-weight: 300;
+}
+
+.product-information .price{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+}
+
+.product-information .time{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.product-information .text-price{
+    color: var(--Cyan);
+    font-weight: 600;
+}
+
+.product-information .text-time{
+    font-weight: 400;
+}
+
+.ethereum, .clock {
+    display: inline-block;
+    width:2rem; 
+    height:2rem;
+    background-repeat: no-repeat;
+}
+
+.ethereum{
+    background-image: url('./images/icon-ethereum.svg');
+}
+
+.clock{
+    margin-right: 0.4rem;
+    background-image: url('./images/icon-clock.svg');
+}
+
+/*-------------------CREATOR-----------------------------*/
+
+.creator{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 7.4rem;
+    
+}
+
+.image-creator{
+    grid-column: 1 / 2;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+    margin-left: 2rem;
+}
+
+.text-creator{
+    grid-column: 2 / 3;
+
+}
+
+.name-creator{
+    color: var(--White);
+}
+
+.name-creator:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+    
+}
+
+/*--------FOOTER------------------------------------*/
+.attribution { 
+    margin: 2rem 0;
+    font-size: 1.1rem; 
+    text-align: center; }
+
+.attribution a { color: yellow; }
+
+
+/*-------------------- MIN-WIDTH: 900PX--------------*/
+
+@media(min-width:900px){
+    .main-container{
+        margin-top: 15.2rem;
+    }
+
+    .attribution {
+        margin-bottom: 13rem;
+    }
+}
